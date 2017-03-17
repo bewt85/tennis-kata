@@ -10,4 +10,8 @@ class Tennis
     @score = '15:0'
   end
 
+  def player2_wins_a_point
+    @score = "0:15"
+  end
+
 end

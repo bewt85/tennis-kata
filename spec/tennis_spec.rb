@@ -12,8 +12,14 @@ describe Tennis do
     expect(tennis.score).to eq "15:0"
   end
 
+  specify "player 1 wins 2 points in a row" do
+    2.times { tennis.player1_wins_a_point }
+    expect(tennis.score).to eq "30:0"
+  end
+
   specify "player 2 wins a point" do
     tennis.player2_wins_a_point
     expect(tennis.score).to eq "0:15"
   end
+
 end
