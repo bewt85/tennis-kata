@@ -1,8 +1,8 @@
 require_relative "../tennis"
 
-describe 'tennis' do
+describe Tennis do
   specify 'players are love-all when game starts' do
-    expect(Tennis.new.score).to eq '0:0'
+    expect(subject.score).to eq '0:0'
   end
 end
 
