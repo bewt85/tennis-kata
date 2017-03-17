@@ -5,10 +5,11 @@ class Tennis
   def initialize
     @score = "0:0"
   end
-
+ 
   def player1_wins_a_point
     player1_score = @score.match(/(\d+)\:/)[1].to_i
-    @score = "#{player1_score+15}:0"
+    increment = player1_score <= 15 ? 15 : 10
+    @score = "#{player1_score+increment}:0"
   end
 
   def player2_wins_a_point
