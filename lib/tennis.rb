@@ -12,7 +12,12 @@ class Tennis
   end
 
   def player2_wins_a_point
-    @score = "0:15"
+    @score = case @score
+    when "0:0"
+      "0:15"
+    when "0:15"
+      "0:30"
+    end
   end
 
 end
