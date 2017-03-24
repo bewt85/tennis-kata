@@ -13,8 +13,13 @@ class Tennis
       return
     end
 
-    increment = player1_score <= 15 ? 15 : 10
-    @score = "#{player1_score+increment}:#{player2_score}"
+    player1_score += player1_score <= 15 ? 15 : 10
+    if player1_score == 40 && player2_score == 40
+      @score = "deuce"
+      return
+    end
+
+    @score = "#{player1_score}:#{player2_score}"
   end
 
   def player2_wins_a_point
