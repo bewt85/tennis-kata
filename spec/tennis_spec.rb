@@ -22,6 +22,11 @@ describe Tennis do
     expect(tennis.score).to eq "40:0"
   end
 
+ specify "player 1 wins 4 points in a row" do
+    4.times { tennis.player1_wins_a_point }
+    expect(tennis.score).to eq "Player 1 wins"
+  end
+
   specify "player 2 wins a point" do
     tennis.player2_wins_a_point
     expect(tennis.score).to eq "0:15"
@@ -40,6 +45,12 @@ describe Tennis do
   specify "player 2 wins 4 points in a row" do
     4.times { tennis.player2_wins_a_point }
     expect(tennis.score).to eq "Player 2 wins"
+  end
+
+  xspecify "player 2 wins 5 points in a row" do
+    4.times { tennis.player2_wins_a_point }
+    expect( tennis.score ).to eq 'Game Over'
+    expect{ tennis.player2_wins_a_point }.to raise_error 'Game Over'
   end
 
   xspecify "player 1 and 2 both win a point" do
