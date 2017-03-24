@@ -14,7 +14,7 @@ class Tennis
     end
 
     increment = player1_score <= 15 ? 15 : 10
-    @score = "#{player1_score+increment}:0"
+    @score = "#{player1_score+increment}:#{player2_score}"
   end
 
   def player2_wins_a_point
