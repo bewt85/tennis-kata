@@ -64,4 +64,10 @@ describe Tennis do
     tennis.player1_wins_a_point
     expect(tennis.score).to eq "15:15"
   end
+
+  specify "player 1 wins 2 points and player 2 wins 1 point" do
+    2.times { tennis.player1_wins_a_point }
+    tennis.player2_wins_a_point
+    expect(tennis.score).to eq "30:15"
+  end
 end
