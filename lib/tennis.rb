@@ -18,6 +18,8 @@ class Tennis
       "0:15"
     when "0:15"
       "0:30"
+    when "0:30"
+      "0:40"
     end
   end
 
