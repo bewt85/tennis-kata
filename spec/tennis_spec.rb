@@ -94,4 +94,10 @@ describe Tennis do
     3.times { tennis.player2_wins_a_point }
     expect(tennis.score).to eq "deuce"
   end
+
+  specify "player 2 wins 3 points and player 1 wins 3 points" do
+    3.times { tennis.player2_wins_a_point }
+    3.times { tennis.player1_wins_a_point }
+    expect(tennis.score).to eq "deuce"
+  end
 end
