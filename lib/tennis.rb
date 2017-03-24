@@ -21,6 +21,8 @@ class Tennis
     @score = case @score
     when "0:0"
       "0:15"
+    when "15:0"
+      "15:15"
     when "0:15"
       "0:30"
     when "0:30"
