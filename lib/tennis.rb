@@ -18,18 +18,19 @@ class Tennis
   end
 
   def player2_wins_a_point
-    @score = case @score
-    when "0:0"
-      "0:15"
-    when "15:0"
-      "15:15"
-    when "0:15"
-      "0:30"
-    when "0:30"
-      "0:40"
-    when "0:40"
-      "Player 2 wins"
+    player1_score, player2_score = @score.split(":").map(&:to_i)
+    if player2_score == 40
+      @score = "Player 2 wins"
+      return
     end
+
+    @score = "#{player1_score}:#{MAPPING[player2_score]}"
   end
+
+  MAPPING = {
+    0 => 15,
+    15 => 30,
+    30 => 40,
+  }
 
 end
