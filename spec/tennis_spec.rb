@@ -53,7 +53,7 @@ describe Tennis do
     expect{ tennis.player2_wins_a_point }.to raise_error 'Game Over'
   end
 
-  xspecify "player 1 and 2 both win a point" do
+  specify "player 1 and 2 both win a point" do
     tennis.player1_wins_a_point
     tennis.player2_wins_a_point
     expect(tennis.score).to eq "15:15"
