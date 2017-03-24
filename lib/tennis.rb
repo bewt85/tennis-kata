@@ -20,6 +20,8 @@ class Tennis
       "0:30"
     when "0:30"
       "0:40"
+    when "0:40"
+      "Player 2 wins"
     end
   end
 
