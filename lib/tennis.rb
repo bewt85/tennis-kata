@@ -7,7 +7,7 @@ class Tennis
   end
 
   def player1_wins_a_point
-    player1_score = @score.match(/(\d+)\:/)[1].to_i
+    player1_score, player2_score = @score.split(":").map(&:to_i)
     if player1_score == 40
       @score = "Player 1 wins"
       return
